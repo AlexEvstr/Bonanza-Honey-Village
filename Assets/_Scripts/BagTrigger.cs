@@ -13,7 +13,7 @@ public class BagTrigger : MonoBehaviour
             Destroy(collision.gameObject);
             SweetsCounter.SweetAmount++;
 
-            if (SweetsCounter.SweetAmount == 3)
+            if (SweetsCounter.SweetAmount == 20)
             {
                 LevelController.Level++;
                 PlayerPrefs.SetInt("level", LevelController.Level);
