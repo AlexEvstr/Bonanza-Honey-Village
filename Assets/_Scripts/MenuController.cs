@@ -7,7 +7,8 @@ public class MenuController : MonoBehaviour
 {
     private void Start()
     {
-        
+        Time.timeScale = 1;
+        Screen.orientation = ScreenOrientation.Portrait;
     }
 
     public void PlayBtn()

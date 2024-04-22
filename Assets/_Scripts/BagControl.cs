@@ -15,7 +15,6 @@ public class BagControl : MonoBehaviour
     //    }
     //}
 
-    [SerializeField] private GameObject _tutorial;
     private float _speed = 20.0f;
     private void FixedUpdate()
     {
