@@ -16,6 +16,8 @@ public class MenuController : MonoBehaviour
 
     public void PlayBtn()
     {
+        int bestLevel = PlayerPrefs.GetInt("bestLevel", 1);
+        PlayerPrefs.SetInt("level", bestLevel);
         SceneManager.LoadScene("GameScene");
     }
 

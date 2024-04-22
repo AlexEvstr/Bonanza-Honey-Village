@@ -13,10 +13,16 @@ public class BagTrigger : MonoBehaviour
             Destroy(collision.gameObject);
             SweetsCounter.SweetAmount++;
 
-            if (SweetsCounter.SweetAmount == 20)
+            if (SweetsCounter.SweetAmount == 3)
             {
                 LevelController.Level++;
                 PlayerPrefs.SetInt("level", LevelController.Level);
+                int bestLevel = PlayerPrefs.GetInt("bestLevel", 1);
+                if (bestLevel < LevelController.Level)
+                {
+                    bestLevel = LevelController.Level;
+                    PlayerPrefs.SetInt("bestLevel", bestLevel);
+                }
                 _winPanel.SetActive(true);
                 Time.timeScale = 0;
             }
