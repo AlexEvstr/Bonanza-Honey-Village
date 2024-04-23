@@ -50,19 +50,21 @@ public class SoundAndVibro : MonoBehaviour
 
     public void VibroTurnOff()
     {
+        CanVibro = false;
         if (CanVibro) Vibration.VibrateIOS(ImpactFeedbackStyle.Light);
         _vibroOff.SetActive(true);
         _vibroOn.SetActive(false);
-        CanVibro = false;
+        
         PlayerPrefs.SetString("vibro", "off");
     }
 
     public void VibroTurnOn()
     {
+        CanVibro = true;
         if (CanVibro) Vibration.VibrateIOS(ImpactFeedbackStyle.Light);
         _vibroOff.SetActive(false);
         _vibroOn.SetActive(true);
-        CanVibro = true;
+
         PlayerPrefs.SetString("vibro", "on");
     }
 }

@@ -6,6 +6,19 @@ public class BagTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject _winPanel;
 
+    private void Awake()
+    {
+        int control = PlayerPrefs.GetInt("control", 1);
+        if (control == 1)
+        {
+            GetComponent<BagControl2>().enabled = false;
+        }
+        else
+        {
+            GetComponent<BagControl>().enabled = false;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Candy"))

@@ -4,17 +4,6 @@ using UnityEngine;
 
 public class BagControl : MonoBehaviour
 {
-    //private float _movementSpeed = 0.005f;
-    //private Touch _touch;
-    //private void Update()
-    //{
-    //    if (Input.touchCount > 0 && !_tutorial.activeInHierarchy)
-    //    {
-    //        _touch = Input.GetTouch(0);
-    //        transform.position = new Vector2(transform.position.x + _touch.deltaPosition.x * _movementSpeed, transform.position.y);
-    //    }
-    //}
-
     private float _speed = 20.0f;
     private void FixedUpdate()
     {
