@@ -36,7 +36,6 @@ public class SoundAndVibro : MonoBehaviour
 
     public void MusicOff()
     {
-        if (CanVibro) Vibration.VibrateIOS(ImpactFeedbackStyle.Light);
         _musicOff.SetActive(true);
         _musicOn.SetActive(false);
         AudioListener.volume = 0;
@@ -45,7 +44,6 @@ public class SoundAndVibro : MonoBehaviour
 
     public void MusicOn()
     {
-        if (CanVibro) Vibration.VibrateIOS(ImpactFeedbackStyle.Light);
         _musicOff.SetActive(false);
         _musicOn.SetActive(true);
         AudioListener.volume = 1;
@@ -55,7 +53,6 @@ public class SoundAndVibro : MonoBehaviour
     public void VibroTurnOff()
     {
         CanVibro = false;
-        if (CanVibro) Vibration.VibrateIOS(ImpactFeedbackStyle.Light);
         _vibroOff.SetActive(true);
         _vibroOn.SetActive(false);
         
@@ -65,7 +62,7 @@ public class SoundAndVibro : MonoBehaviour
     public void VibroTurnOn()
     {
         CanVibro = true;
-        if (CanVibro) Vibration.VibrateIOS(ImpactFeedbackStyle.Light);
+        
         _vibroOff.SetActive(false);
         _vibroOn.SetActive(true);
 
@@ -74,6 +71,7 @@ public class SoundAndVibro : MonoBehaviour
 
     public void ClickSound()
     {
+        if (CanVibro) Vibration.VibrateIOS(ImpactFeedbackStyle.Light);
         _audioSource.PlayOneShot(_click);
     }
 }

@@ -25,7 +25,6 @@ public class LevelBtn : MonoBehaviour
 
     public void PickLvl()
     {
-        if (SoundAndVibro.CanVibro) Vibration.VibrateIOS(ImpactFeedbackStyle.Light);
         PlayerPrefs.SetInt("level", int.Parse(gameObject.name));
         SceneManager.LoadScene("GameScene");
     }

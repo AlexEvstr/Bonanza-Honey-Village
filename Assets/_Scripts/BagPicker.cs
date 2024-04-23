@@ -24,7 +24,6 @@ public class BagPicker : MonoBehaviour
 
     public void UseButton()
     {
-        if (SoundAndVibro.CanVibro) Vibration.VibrateIOS(ImpactFeedbackStyle.Light);
         PlayerPrefs.SetInt("bagColor", int.Parse(gameObject.name));
         _picker.transform.SetParent(transform);
     }
