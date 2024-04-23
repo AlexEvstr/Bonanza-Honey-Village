@@ -32,7 +32,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6947294865897118041}
+  - {fileID: 3935692102715408174}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8426529714209124729
@@ -176,7 +176,7 @@ PolygonCollider2D:
       - {x: -0.029378414, y: 0.4330021}
       - {x: -0.3935703, y: 0.13746008}
   m_UseDelaunayMesh: 0
---- !u!1001 &8353936926057542595
+--- !u!1001 &2673160834531038644
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -261,8 +261,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c013d8857e5c3848ba1efbd2f39676c, type: 3}
---- !u!4 &6947294865897118041 stripped
+--- !u!4 &3935692102715408174 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1406981811604351642, guid: 9c013d8857e5c3848ba1efbd2f39676c, type: 3}
-  m_PrefabInstance: {fileID: 8353936926057542595}
+  m_PrefabInstance: {fileID: 2673160834531038644}
   m_PrefabAsset: {fileID: 0}
