@@ -8,6 +8,7 @@ public class MenuController : MonoBehaviour
     [SerializeField] private GameObject _levelsPanel;
     [SerializeField] private GameObject _skinsPanel;
     [SerializeField] private GameObject _settingsPanel;
+    [SerializeField] private GameObject _howToPlay;
     private void Start()
     {
         Time.timeScale = 1;
@@ -54,5 +55,15 @@ public class MenuController : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void HowToPlayButton()
+    {
+        _howToPlay.SetActive(true);
+    }
+
+    public void CloseHowToPlay()
+    {
+        _howToPlay.SetActive(false);
     }
 }
