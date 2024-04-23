@@ -19,8 +19,15 @@ public class SweetsSpawner : MonoBehaviour
             int randomIndex = Random.Range(0, _sweets.Length);
             int randomX = Random.Range(0, _xPosition.Length);
             GameObject sweet = Instantiate(_sweets[randomIndex]);
+            StartCoroutine(MakeOutOfPipeSound());
             sweet.transform.position = new Vector3(_xPosition[randomX], 7, 0);
             yield return new WaitForSeconds(Random.Range(1f, 3f));
         }
+    }
+
+    private IEnumerator MakeOutOfPipeSound()
+    {
+        yield return new WaitForSeconds(4.5f);
+        GetComponent<GameSounds>().OutOfPipeSound();
     }
 }

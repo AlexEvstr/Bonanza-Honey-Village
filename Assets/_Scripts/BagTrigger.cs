@@ -5,6 +5,7 @@ using UnityEngine;
 public class BagTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject _winPanel;
+    [SerializeField] private GameSounds _gameSounds;
 
     private void Awake()
     {
@@ -24,6 +25,7 @@ public class BagTrigger : MonoBehaviour
         if (collision.gameObject.CompareTag("Candy"))
         {
             Destroy(collision.gameObject);
+            _gameSounds.PickSound();
             SweetsCounter.SweetAmount++;
 
             if (SweetsCounter.SweetAmount == 20)
@@ -37,6 +39,7 @@ public class BagTrigger : MonoBehaviour
                     PlayerPrefs.SetInt("bestLevel", bestLevel);
                 }
                 _winPanel.SetActive(true);
+                _gameSounds.WinSound();
                 Time.timeScale = 0;
             }
         }
