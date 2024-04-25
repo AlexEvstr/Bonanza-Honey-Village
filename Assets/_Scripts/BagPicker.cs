@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class BagPicker : MonoBehaviour
 {
     [SerializeField] private GameObject _picker;
+
     private void Start()
     {
         SetPickerPosition();

@@ -6,6 +6,7 @@ public class BagTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject _winPanel;
     [SerializeField] private GameSounds _gameSounds;
+    [SerializeField] private GameObject _gemeoverPanel;
 
     private void Awake()
     {
@@ -42,6 +43,14 @@ public class BagTrigger : MonoBehaviour
                 _gameSounds.WinSound();
                 Time.timeScale = 0;
             }
+        }
+        else if (collision.gameObject.CompareTag("BadFood"))
+        {
+            Destroy(collision.gameObject);
+            _gameSounds.LoseSound();
+            _gemeoverPanel.SetActive(true);
+            Time.timeScale = 0;
+            _gameSounds.GameOverSound();
         }
     }
 }

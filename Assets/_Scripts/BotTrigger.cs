@@ -9,7 +9,7 @@ public class BotTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Candy"))
+        if (collision.gameObject.CompareTag("Candy") || collision.gameObject.CompareTag("BadFood"))
         {
             Destroy(collision.gameObject);
             _gameSounds.LoseSound();

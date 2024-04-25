@@ -8,6 +8,7 @@ public class GameSounds : MonoBehaviour
     [SerializeField] private AudioClip _loseSound;
     [SerializeField] private AudioClip _gameOverSound;
     [SerializeField] private AudioClip _winSound;
+    [SerializeField] private AudioClip _foodDestroySound;
 
     private AudioSource _audioSource;
     public static bool CanVibro;
@@ -56,5 +57,11 @@ public class GameSounds : MonoBehaviour
     {
         if (CanVibro) Vibration.VibrateIOS(ImpactFeedbackStyle.Heavy);
         _audioSource.PlayOneShot(_winSound);
+    }
+
+    public void FoodDestroySound()
+    {
+        if (CanVibro) Vibration.VibrateIOS(ImpactFeedbackStyle.Rigid);
+        _audioSource.PlayOneShot(_foodDestroySound);
     }
 }

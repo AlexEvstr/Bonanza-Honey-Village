@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BagControl2 : MonoBehaviour
 {
-    private float _movementSpeed = 0.005f;
+    private float _movementSpeed = 0.01f;
     private Touch _touch;
 
     private void Update()

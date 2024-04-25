@@ -21,7 +21,7 @@ public class SweetsSpawner : MonoBehaviour
             GameObject sweet = Instantiate(_sweets[randomIndex]);
             StartCoroutine(MakeOutOfPipeSound());
             sweet.transform.position = new Vector3(_xPosition[randomX], 7, 0);
-            yield return new WaitForSeconds(Random.Range(1f, 3f));
+            yield return new WaitForSeconds(Random.Range(2f, 3f));
         }
     }
 
